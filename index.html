@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="/favicon.svg">
+<title>Ahead Cane</title>
+<meta name="description" content="Ahead is an iPhone app for people who walk with a white cane. It senses what is at chest and head height and gives a vibration cue, as an extra alongside the cane.">
+<meta name="color-scheme" content="light dark">
+<style>
+/* Plain values with a media query, not light-dark(), which Safari before 17.5 drops. */
+:root{color-scheme:light dark;--bg:#f2f2f7;--card:#fff;--text:#000;--dim:#595959;--blue:#0062cc;--on-blue:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--card:#1c1c1e;--text:#fff;--dim:#a1a1a6;--blue:#4da3ff;--on-blue:#000}}
+/* -apple-system-body follows the iPhone's Text Size setting; other browsers keep the line before it. */
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.5 -apple-system,system-ui,sans-serif;font:-apple-system-body;line-height:1.5;-webkit-text-size-adjust:100%}
+main{max-width:40rem;margin:0 auto;padding:1rem 1rem 3rem}
+header{display:flex;align-items:center;gap:.75rem;margin:1rem 0 .5rem}
+header img{width:56px;height:56px;flex:none}
+h1{font-size:2em;line-height:1.2;margin:0}h2{font-size:1.3em;margin:2rem 0 .25rem}
+p,ul{margin:.5rem 0}li{margin:.25rem 0}
+a{color:var(--blue)}.dim{color:var(--dim)}:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.cta{display:flex;align-items:center;justify-content:center;min-height:52px;margin:1.5rem 0 .5rem;padding:0 1rem;font-weight:600;color:var(--on-blue);background:var(--blue);border-radius:12px;text-decoration:none}
+.safety{margin-top:1.5rem;padding:0 1rem 1rem;border-radius:10px;background:var(--card);border:2px solid var(--dim)}
+.safety h2{margin-top:0;padding-top:1rem}
+nav ul{list-style:none;padding:0}nav a{display:flex;align-items:center;min-height:44px}
+</style>
+<main>
+<header><img src="/favicon.svg" alt=""><h1>Ahead</h1></header>
+<p>Ahead is an iPhone app for people who walk with a white cane. The phone sits in a chest mount and reads what is at chest and head height with its LiDAR sensor, where the cane does not reach, and gives a vibration cue.</p>
+
+<section class="safety" aria-labelledby="safety">
+<h2 id="safety">Before you rely on it</h2>
+<p>Ahead is an extra cue and never replaces your cane or your own judgement. It can miss things such as glass, thin poles, steps and drops, and it never tells you whether to cross a street. Silence does not mean the way is clear.</p>
+</section>
+
+<a class="cta" href="beta/">Join the beta</a>
+<p class="dim">Free, through Apple's TestFlight. Needs an iPhone with LiDAR: a 12 Pro or a later Pro model.</p>
+
+<h2>What it does</h2>
+<ul>
+<li>Pulses slowly when something stands within 2.5 metres ahead of you at chest or head height, and fast within 1 metre. It stays silent beyond that.</li>
+<li>Answers a spoken question about what is in front of the camera, such as "what does the sign say", in one sentence. The photo and the question are sent to an AI service to answer it, and the answer can be wrong.</li>
+<li>Starts and stops without the screen: Siri, VoiceOver's two-finger double tap, Back Tap, or the Action Button on a 15 Pro or later.</li>
+<li>Needs no extra hardware. An optional board on the cane adds a buzz in the grip, and a thumb lever that points to the side it measures as open and stays centred when it is unsure.</li>
+</ul>
+
+<h2>Where it stands</h2>
+<p>Ahead is in a beta and only a few people have walked with it so far. It was started at a hackathon by a student team and is being prepared for the App Store with feedback from people who use a cane.</p>
+
+<nav aria-label="More">
+<ul>
+<li><a href="support/">Help and contact</a></li>
+<li><a href="privacy/">Privacy policy</a></li>
+<li><a href="https://github.com/Jog-sama/AHEAD">Source code on GitHub</a></li>
+</ul>
+</nav>
+</main>
+</html>

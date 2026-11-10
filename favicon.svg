@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- A chevron pointing up the path with a question mark's dot under it: the one question a cane user asks about what lies ahead, at head height. -->
+  <rect x="1" y="1" width="126" height="126" rx="28" fill="#1b2a4a"/>
+  <path d="M28 74 L64 30 L100 74" fill="none" stroke="#f2f4f8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="64" cy="100" r="10" fill="#f6b73c"/>
+</svg>
