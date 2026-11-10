@@ -6,7 +6,9 @@
 <meta name="color-scheme" content="light dark">
 <title>Join the Ahead beta</title>
 <style>
-:root{color-scheme:light dark;--bg:light-dark(#f2f2f7,#000);--card:light-dark(#fff,#1c1c1e);--text:light-dark(#000,#fff);--dim:light-dark(#595959,#a1a1a6);--line:light-dark(#6e6e73,#8e8e93);--blue:light-dark(#0062cc,#4da3ff);--err:light-dark(#b3261e,#ff8a80)}
+/* Plain values with a media query, not light-dark(), which Safari before 17.5 drops. */
+:root{color-scheme:light dark;--bg:#f2f2f7;--card:#fff;--text:#000;--dim:#595959;--line:#6e6e73;--blue:#0062cc;--err:#b3261e;--on-blue:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--card:#1c1c1e;--text:#fff;--dim:#a1a1a6;--line:#8e8e93;--blue:#4da3ff;--err:#ff8a80;--on-blue:#000}}
 body{margin:0;background:var(--bg);color:var(--text);font:17px/1.45 -apple-system,system-ui,sans-serif;-webkit-text-size-adjust:100%}
 main{max-width:34rem;margin:0 auto;padding:1rem 1rem 3rem}
 h1{font-size:2rem;line-height:1.2;margin:1rem 0 .5rem}
@@ -18,7 +20,7 @@ input[type=email],select{width:100%;box-sizing:border-box;min-height:48px;paddin
 .choice{display:flex;align-items:flex-start;gap:.75rem;min-height:48px}
 .choice input{flex:none;width:24px;height:24px;margin:.6rem 0 0}
 .choice label{margin:0;font-weight:400;min-height:48px;padding:.4rem 0;flex:1;box-sizing:border-box}
-button{width:100%;min-height:52px;margin-top:1.5rem;font:inherit;font-weight:600;color:light-dark(#fff,#000);background:var(--blue);border:0;border-radius:12px;cursor:pointer}
+button{width:100%;min-height:52px;margin-top:1.5rem;font:inherit;font-weight:600;color:var(--on-blue);background:var(--blue);border:0;border-radius:12px;cursor:pointer}
 button[aria-disabled=true]{opacity:.6}
 :focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .msg{margin-top:1.5rem;padding:1rem;border-radius:10px;background:var(--card);border:2px solid var(--line)}
